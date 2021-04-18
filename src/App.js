@@ -3,21 +3,22 @@ import {Header} from './compontents/Header';
 import {Balance} from './compontents/Balance';
 import {AccountSummary} from './compontents/AccountSummary';
 import {AddTransaction} from './compontents/AddTransaction';
-import { TransactionHistroy } from './compontents/TransactionHistory';
+import { TransactionHistory } from './compontents/TransactionHistory';
 import './App.css';
+import { GlobalProvider } from './context/GlobalState';
 
 
 function App() {
   return (
-    <div >
+    <GlobalProvider >
       <Header />
       <div className="container">
         <Balance />
         <AccountSummary />
-        <TransactionHistroy />
+        <TransactionHistory />
         <AddTransaction />
       </div>
-    </div>
+    </GlobalProvider>
   );
 }
 
